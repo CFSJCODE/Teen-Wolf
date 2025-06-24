@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotos da Equipe - Teen Wolf</title>
+    <!-- Icone do Site (Favicon) -->
+    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -204,6 +206,49 @@
                 }
             });
         });
+    </script>
+    <script>
+        // Script para arredondar o ícone do site (favicon)
+        window.onload = function() {
+            const faviconLink = document.getElementById('favicon');
+            if (!faviconLink) return;
+
+            const originalFaviconUrl = faviconLink.href;
+            const img = new Image();
+            // Permite carregar a imagem de outro domínio (ibb.co) sem problemas de CORS no canvas
+            img.crossOrigin = 'Anonymous'; 
+            img.src = originalFaviconUrl;
+
+            // Quando a imagem for carregada, executa o código para arredondá-la
+            img.onload = function() {
+                const canvas = document.createElement('canvas');
+                // Define o tamanho da imagem de origem do favicon. 
+                // Navegadores geralmente redimensionam para 16x16 ou 32x32, 
+                // mas um tamanho maior garante qualidade em outros contextos (ex: favoritos).
+                const size = 64; 
+                canvas.width = size;
+                canvas.height = size;
+
+                const context = canvas.getContext('2d');
+
+                // Cria um caminho de recorte circular
+                context.beginPath();
+                context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2, true);
+                context.closePath();
+                context.clip();
+
+                // Desenha a imagem original dentro do círculo
+                context.drawImage(img, 0, 0, size, size);
+
+                // Define o novo ícone (agora circular) como o favicon da página
+                faviconLink.href = canvas.toDataURL('image/png');
+            };
+
+            // Adiciona um tratamento de erro caso a imagem não possa ser carregada
+            img.onerror = function() {
+                console.error("Não foi possível carregar a imagem do favicon para arredondamento.");
+            };
+        };
     </script>
 </body>
 </html>
