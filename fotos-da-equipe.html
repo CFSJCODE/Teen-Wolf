@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos da Equipe - Teen Wolf</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo customizado para usar a fonte Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        /* Efeito de vidro para o container principal */
+        .glass-container {
+            background: rgba(31, 41, 55, 0.5); /* bg-gray-800 com opacidade */
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Sombra de texto para legibilidade */
+        .text-shadow {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        /* Efeito para os cards das imagens */
+        .photo-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .photo-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .photo-card img {
+            transition: transform 0.4s ease;
+        }
+        .photo-card:hover img {
+            transform: scale(1.1);
+        }
+        /* Estilos para o Modal Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .lightbox.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+        .lightbox.show .lightbox-content {
+            transform: scale(1);
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .lightbox-close:hover {
+            color: #fb923c; /* orange-400 */
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Menu de Navegação -->
+    <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div>
+                    <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors duration-300">TEEN WOLF</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Início</a>
+                    <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Sobre Nós</a>
+                    <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">História Da Equipe</a>
+                    <a href="fotos-da-equipe.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Fotos Da Equipe</a>
+                    <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
+                </div>
+                <!-- Menu para mobile (opcional, pode ser implementado com JS) -->
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="w-full p-4 sm:p-6 md:p-8">
+        <div class="glass-container w-full max-w-7xl mx-auto rounded-3xl p-8 md:p-12">
+            
+            <!-- Cabeçalho da Galeria -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-orange-500 text-shadow">Galeria de Fotos</h1>
+                <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto text-shadow">
+                    Nossos melhores momentos, capturados em imagens.
+                </p>
+            </header>
+
+            <!-- Galeria de Imagens -->
+            <div id="photo-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Imagem 1 -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/RpddQNtS/07-De-Maio-De-2023.jpg" alt="Foto da equipe em 7 de Maio de 2023" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Imagem 2 -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/1tgQFRSq/11-de-julho-de-2024.jpg" alt="Foto da equipe em 11 de Julho de 2024" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Imagem 3 -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/7J9bwLPf/12-De-Feveiro-De-2023.jpg" alt="Foto da equipe em 12 de Fevereiro de 2023" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Imagem 4 -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/84jrBxtw/30-De-Outubro-De-2024.jpg" alt="Foto da equipe em 30 de Outubro de 2024" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Imagem 5 -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/6RTS38Bf/Foto-12-De-Fevereiro-De-2023.png" alt="Outra foto da equipe em 12 de Fevereiro de 2023" class="w-full h-full object-cover">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="Imagem em tela cheia">
+    </div>
+
+    <script>
+        // Lógica para o Lightbox
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('photo-gallery');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            gallery.addEventListener('click', (e) => {
+                // Verifica se o clique foi em um card de foto
+                const photoCard = e.target.closest('.photo-card');
+                if (photoCard) {
+                    const imageElement = photoCard.querySelector('img');
+                    if(imageElement) {
+                        // Define a imagem do lightbox e o exibe
+                        lightboxImage.src = imageElement.src;
+                        lightbox.classList.add('show');
+                    }
+                }
+            });
+
+            // Função para fechar o lightbox
+            const closeLightbox = () => {
+                lightbox.classList.remove('show');
+            };
+
+            // Event listeners para fechar o lightbox
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                // Fecha se o clique for no fundo escuro, não na imagem
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

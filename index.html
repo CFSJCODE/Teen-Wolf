@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Teen Wolf</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo customizado para usar a fonte Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        /* Efeito de vidro para consistência visual */
+        .glass-effect {
+            background: rgba(31, 41, 55, 0.6); /* bg-gray-800 com opacidade */
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Sombra de texto para legibilidade */
+        .text-shadow {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        /* Efeito de brilho laranja para o logo */
+        .shadow-orange-glow {
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5), 0 0 10px rgba(249, 115, 22, 0.7);
+        }
+        
+        /* Efeito de hover para o título principal */
+        .title-smoke {
+            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+        }
+
+        .title-smoke:hover {
+            color: #f97316; /* Cor Laranja (Tailwind orange-500) */
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.7), 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Estilo para os botões de ação */
+        .action-button {
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .action-button:hover {
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Menu de Navegação -->
+    <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div>
+                    <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-400 transition-colors duration-300">TEEN WOLF</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Início</a>
+                    <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Sobre Nós</a>
+                    <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">História Da Equipe</a>
+                    <a href="fotos-da-equipe.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Fotos Da Equipe</a>
+                    <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
+                </div>
+                <!-- Menu para mobile (opcional, pode ser implementado com JS) -->
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <main class="glass-effect w-full max-w-2xl mx-auto rounded-3xl p-8 md:p-12 text-center">
+            
+            <img src="https://i.ibb.co/j2FYSQB/Logo.png" alt="Logo da Equipe Teen Wolf" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-orange-500 shadow-orange-glow mb-6 -mt-24 md:-mt-28">
+            
+            <h1 class="title-smoke text-4xl md:text-5xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">TEEN WOLF</h1>
+            <p class="mt-2 text-lg text-gray-200 text-shadow">Construindo o futuro, um bloco de cada vez.</p>
+            
+            <!-- Nova Seção: Descrição da Equipe -->
+            <p class="mt-6 text-gray-300 max-w-lg mx-auto">
+                Somos uma equipe de robótica apaixonada por tecnologia e inovação. Participamos de torneios da FIRST LEGO League, desenvolvendo soluções criativas para desafios do mundo real e programando robôs para missões complexas.
+            </p>
+
+            <!-- Nova Seção: Botões de Ação -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://www.instagram.com/teenwolf_goba/" target="_blank" class="action-button w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    Siga no Instagram
+                </a>
+                <a href="sobre-nos.html" class="action-button w-full sm:w-auto bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg">
+                    Conheça a Equipe
+                </a>
+            </div>
+
+            <div class="mt-10 border-t border-white/20 pt-6 space-y-4 text-gray-100">
+                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" /></svg><span>Ensino Fundamental II</span></div>
+                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" /></svg><span>Sesi Barreiro</span></div>
+                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.1.4-.27.6-.53l.6-1.037.135-.234A3.507 3.507 0 0012 15V9.5a3.5 3.5 0 00-7 0V15a3.5 3.5 0 00.406 1.482l.135.234.6 1.037c.2.26.414.43.6.53.095.05.186.1.281.14l.018.008.006.003zM10 16.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /><path d="M10 1.5a5.5 5.5 0 00-5.478 5.035l-1.018.182A1.5 1.5 0 002 8.217V15a4.5 4.5 0 004.5 4.5h7A4.5 4.5 0 0018 15V8.217a1.5 1.5 0 00-1.504-1.499l-1.018-.182A5.5 5.5 0 0010 1.5zM9 6.5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" /></svg><span>MG - Brasil 🇧🇷</span></div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
