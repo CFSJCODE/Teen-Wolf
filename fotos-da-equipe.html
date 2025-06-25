@@ -109,15 +109,23 @@
                     <a href="fotos-da-equipe.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Fotos Da Equipe</a>
                     <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
                 </div>
-                <!-- Menu para mobile (opcional, pode ser implementado com JS) -->
+                <!-- Botão do Menu Hamburguer para Mobile -->
                 <div class="md:hidden">
-                    <button class="text-white focus:outline-none">
+                    <button id="hamburger-button" class="text-white focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                         </svg>
                     </button>
                 </div>
             </div>
+        </div>
+        <!-- Menu para Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
+            <a href="index.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
+            <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Sobre Nós</a>
+            <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">História Da Equipe</a>
+            <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-orange-400">Fotos Da Equipe</a>
+            <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
         </div>
     </nav>
 
@@ -172,6 +180,21 @@
     </div>
 
     <script>
+        // Script para o menu hamburguer
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Script para fechar o menu ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         // Lógica para o Lightbox
         document.addEventListener('DOMContentLoaded', () => {
             const gallery = document.getElementById('photo-gallery');
@@ -206,8 +229,7 @@
                 }
             });
         });
-    </script>
-    <script>
+        
         // Script para arredondar o ícone do site (favicon)
         window.onload = function() {
             const faviconLink = document.getElementById('favicon');
