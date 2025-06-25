@@ -144,6 +144,11 @@
             <!-- Galeria de Imagens -->
             <div id="photo-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
+                <!-- Nova Imagem Adicionada -->
+                <div class="photo-card rounded-2xl">
+                    <img src="https://i.ibb.co/WRr3bK1/Foto-Teen-Wolf-001.jpg" alt="Foto-Teen-Wolf-001" border="0" class="w-full h-full object-cover">
+                </div>
+
                 <!-- Imagem 1 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/RpddQNtS/07-De-Maio-De-2023.jpg" alt="Foto da equipe em 7 de Maio de 2023" class="w-full h-full object-cover">
@@ -206,6 +211,7 @@
                 // Verifica se o clique foi em um card de foto
                 const photoCard = e.target.closest('.photo-card');
                 if (photoCard) {
+                    // Pega a imagem diretamente dentro do photo-card
                     const imageElement = photoCard.querySelector('img');
                     if(imageElement) {
                         // Define a imagem do lightbox e o exibe
