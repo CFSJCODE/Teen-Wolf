@@ -34,7 +34,7 @@
             box-shadow: 0 0 25px rgba(249, 115, 22, 0.5), 0 0 10px rgba(249, 115, 22, 0.7);
         }
         
-        /* Efeito de hover para o título principal */
+        /* Efeito de hover para os títulos */
         .title-smoke {
             transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
         }
@@ -50,6 +50,26 @@
         }
         .action-button:hover {
             transform: translateY(-2px);
+        }
+
+        /* Estilos da Barra de Rolagem Customizada */
+        /* Para navegadores Webkit (Chrome, Safari) */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #f97316; /* orange-500 */
+            border-radius: 20px;
+            border: 3px solid #1f2937; /* bg-gray-800 */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #ea580c; /* orange-600 */
         }
 
     </style>
@@ -92,23 +112,23 @@
     </nav>
 
     <!-- Container Principal -->
-    <div class="w-full py-32 px-4">
-        <main class="glass-effect w-full max-w-2xl mx-auto rounded-3xl p-8 md:p-12 text-center">
+    <div class="w-full p-4 pt-44 pb-16">
+        <main class="glass-effect w-full max-w-5xl mx-auto rounded-3xl p-8 md:p-12 text-center">
             
-            <img src="https://i.ibb.co/j2FYSQB/Logo.png" alt="Logo da Equipe Teen Wolf" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-orange-500 shadow-orange-glow mb-6 -mt-24 md:-mt-28" onerror="this.onerror=null;this.src='https://placehold.co/160x160/111827/ffffff?text=Logo';">
+            <img src="https://i.ibb.co/j2FYSQB/Logo.png" alt="Logo da Equipe Teen Wolf" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-orange-500 shadow-orange-glow mb-6 -mt-28" onerror="this.onerror=null;this.src='https://placehold.co/160x160/111827/ffffff?text=Logo';">
             
             <h1 class="title-smoke text-4xl md:text-5xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">TEEN WOLF</h1>
             <p class="mt-2 text-lg text-gray-200 text-shadow">Construindo o futuro, um bloco de cada vez.</p>
             
             <!-- Seção: Descrição da Equipe -->
-            <p class="mt-6 text-gray-300 max-w-lg mx-auto">
+            <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-justify">
                 Somos uma equipe de robótica apaixonada por tecnologia e inovação. Participamos de torneios da FIRST LEGO League, desenvolvendo soluções criativas para desafios do mundo real e programando robôs para missões complexas.
             </p>
 
             <!-- INÍCIO DA SEÇÃO: CALL TO ACTION (CTA) -->
             <div class="mt-8 p-6 rounded-2xl glass-effect border-t border-orange-500/50">
-                <h2 class="text-3xl font-bold text-white text-shadow uppercase tracking-wider">Seja a Força por Trás da Inovação</h2>
-                <p class="mt-3 text-gray-200">
+                <h2 class="title-smoke text-3xl md:text-4xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">Seja a Força por Trás da Inovação</h2>
+                <p class="mt-3 text-gray-200 max-w-2xl mx-auto text-justify">
                     O futuro não espera. Para competir em alto nível e transformar ideias em realidade, precisamos de aliados que acreditam no poder da tecnologia. Seu apoio é o combustível que nos impulsiona para a vitória. Não seja apenas um espectador, <span class="font-bold text-orange-400">faça parte da nossa conquista.</span>
                 </p>
                 <a href="contato.html" class="action-button inline-flex items-center justify-center mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg">
