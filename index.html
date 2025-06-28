@@ -1,147 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Início - Teen Wolf</title>
     <!-- Icone do Site (Favicon) -->
-    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png">
+    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Estilo customizado para usar a fonte Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827; /* bg-gray-900 */
-        }
-        /* Efeito de vidro para consistência visual */
-        .glass-effect {
-            background: rgba(31, 41, 55, 0.6); /* bg-gray-800 com opacidade */
-            -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        /* Sombra de texto para legibilidade */
-        .text-shadow {
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        /* Efeito de brilho laranja para o logo */
-        .shadow-orange-glow {
-            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5), 0 0 10px rgba(249, 115, 22, 0.7);
-        }
-        
-        /* Efeito de hover para os títulos */
-        .title-smoke {
-            transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-        }
-
-        .title-smoke:hover {
-            color: #f97316; /* Cor Laranja (Tailwind orange-500) */
-            text-shadow: 0 0 15px rgba(249, 115, 22, 0.7), 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        /* Estilo para os botões de ação */
-        .action-button {
-            transition: background-color 0.3s, transform 0.2s;
-        }
-        .action-button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Estilos da Barra de Rolagem Customizada */
-        /* Para navegadores Webkit (Chrome, Safari) */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* bg-gray-800 */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #f97316; /* orange-500 */
-            border-radius: 20px;
-            border: 3px solid #1f2937; /* bg-gray-800 */
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #ea580c; /* orange-600 */
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+    <!-- Folha de Estilo Externa -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body class="text-white">
-
     <!-- Menu de Navegação -->
-    <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div>
-                    <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-400 transition-colors duration-300">TEEN WOLF</a>
-                </div>
-                <!-- Menu para Desktop -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Início</a>
-                    <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Sobre Nós</a>
-                    <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">História Da Equipe</a>
-                    <a href="fotos-da-equipe.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Fotos Da Equipe</a>
-                    <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
-                </div>
-                <!-- Botão do Menu Hamburguer para Mobile -->
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
+    <header>
+        <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between h-16">
+                    <div>
+                        <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-400 transition-colors duration-300">TEEN WOLF</a>
+                    </div>
+                    <!-- Menu para Desktop -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="index.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Início</a>
+                        <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Sobre Nós</a>
+                        <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">História Da Equipe</a>
+                        <a href="fotos-da-equipe.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Fotos Da Equipe</a>
+                        <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
+                    </div>
+                    <!-- Botão do Menu Hamburguer para Mobile -->
+                    <div class="md:hidden">
+                        <button id="hamburger-button" class="text-white focus:outline-none" aria-label="Abrir menu">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Menu para Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
-            <a href="index.html" class="block py-2 px-6 text-sm text-orange-400">Início</a>
-            <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Sobre Nós</a>
-            <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">História Da Equipe</a>
-            <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Fotos Da Equipe</a>
-            <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
-        </div>
-    </nav>
+            <!-- Menu para Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
+                <a href="index.html" class="block py-2 px-6 text-sm text-orange-400">Início</a>
+                <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Sobre Nós</a>
+                <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">História Da Equipe</a>
+                <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Fotos Da Equipe</a>
+                <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Container Principal -->
     <div class="w-full p-4 pt-44 pb-16">
         <main class="glass-effect w-full max-w-5xl mx-auto rounded-3xl p-8 md:p-12 text-center">
-            
-            <img src="https://i.ibb.co/j2FYSQB/Logo.png" alt="Logo da Equipe Teen Wolf" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-orange-500 shadow-orange-glow mb-6 -mt-28" onerror="this.onerror=null;this.src='https://placehold.co/160x160/111827/ffffff?text=Logo';">
-            
-            <h1 class="title-smoke text-4xl md:text-5xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">TEEN WOLF</h1>
-            <p class="mt-2 text-lg text-gray-200 text-shadow">Construindo o futuro, um bloco de cada vez.</p>
-            
-            <!-- Seção: Descrição da Equipe -->
-            <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-justify">
-                Somos uma equipe de robótica apaixonada por tecnologia e inovação. Participamos de torneios da FIRST LEGO League, desenvolvendo soluções criativas para desafios do mundo real e programando robôs para missões complexas.
+            <img src="https://i.ibb.co/j2FYSQB/Logo.png" alt="Logo da Equipe Teen Wolf" class="w-40 h-40 mx-auto rounded-full object-cover border-4 border-orange-500 shadow-orange-glow mb-6 -mt-28" onerror="this.onerror=null;this.src='https://placehold.co/160x160/111827/ffffff?text=Logo';" />
+
+            <h1 class="title-smoke text-4xl md:text-5xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">
+                TEEN WOLF
+            </h1>
+            <p class="mt-2 text-lg text-gray-200 text-shadow">
+                Construindo o futuro, um bloco de cada vez.
             </p>
 
-            <!-- INÍCIO DA SEÇÃO: CALL TO ACTION (CTA) -->
-            <div class="mt-8 p-6 rounded-2xl glass-effect border-t border-orange-500/50">
-                <h2 class="title-smoke text-3xl md:text-4xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">Seja a Força por Trás da Inovação</h2>
+            <!-- Seção: Descrição da Equipe -->
+            <section aria-labelledby="descricao-equipe">
+                <h2 id="descricao-equipe" class="sr-only">Descrição da Equipe</h2>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto text-justify">
+                    Somos uma equipe de robótica apaixonada por tecnologia e inovação. Participamos de torneios da FIRST LEGO League, desenvolvendo soluções criativas para desafios do mundo real e programando robôs para missões complexas.
+                </p>
+            </section>
+
+            <!-- Seção: Call to Action (CTA) -->
+            <section class="mt-8 p-6 rounded-2xl glass-effect border-t border-orange-500/50" aria-labelledby="cta-titulo">
+                <h2 id="cta-titulo" class="title-smoke text-3xl md:text-4xl font-black uppercase tracking-wide text-shadow text-white cursor-pointer">
+                    Seja a Força por Trás da Inovação
+                </h2>
                 <p class="mt-3 text-gray-200 max-w-2xl mx-auto text-justify">
                     O futuro não espera. Para competir em alto nível e transformar ideias em realidade, precisamos de aliados que acreditam no poder da tecnologia. Seu apoio é o combustível que nos impulsiona para a vitória. Não seja apenas um espectador, <span class="font-bold text-orange-400">faça parte da nossa conquista.</span>
                 </p>
                 <a href="contato.html" class="action-button inline-flex items-center justify-center mt-6 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg text-lg">
                     Apoie Agora
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
                 </a>
-            </div>
-            <!-- FIM DA SEÇÃO: CALL TO ACTION (CTA) -->
+            </section>
 
             <!-- Seção: Botões de Ação -->
             <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://www.instagram.com/teenwolf_goba/" target="_blank" class="action-button w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <a href="https://www.instagram.com/teenwolf_goba/" target="_blank" rel="noopener noreferrer" class="action-button w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
                     Siga no Instagram
                 </a>
                 <a href="sobre-nos.html" class="action-button w-full sm:w-auto bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg">
@@ -149,62 +104,40 @@
                 </a>
             </div>
 
-            <div class="mt-10 border-t border-white/20 pt-6 space-y-4 text-gray-100">
-                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" /></svg><span>Ensino Fundamental II</span></div>
-                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" /></svg><span>Sesi Barreiro</span></div>
-                <div class="flex items-center justify-center text-md"><svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.1.4-.27.6-.53l.6-1.037.135-.234A3.507 3.507 0 0012 15V9.5a3.5 3.5 0 00-7 0V15a3.5 3.5 0 00.406 1.482l.135.234.6 1.037c.2.26.414.43.6.53.095.05.186.1.281.14l.018.008.006.003zM10 16.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" /><path d="M10 1.5a5.5 5.5 0 00-5.478 5.035l-1.018.182A1.5 1.5 0 002 8.217V15a4.5 4.5 0 004.5 4.5h7A4.5 4.5 0 0018 15V8.217a1.5 1.5 0 00-1.504-1.499l-1.018-.182A5.5 5.5 0 0010 1.5zM9 6.5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" /></svg><span>MG - Brasil 🇧🇷</span></div>
-            </div>
+            <!-- Seção de Informações Adicionais -->
+            <ul class="mt-10 border-t border-white/20 pt-6 space-y-4 text-gray-100">
+                <li class="flex items-center justify-center text-md">
+                    <svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+                    </svg>
+                    <span>Ensino Fundamental II</span>
+                </li>
+                <li class="flex items-center justify-center text-md">
+                    <svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
+                    </svg>
+                    <span>Sesi Barreiro</span>
+                </li>
+                <li class="flex items-center justify-center text-md">
+                    <svg class="w-5 h-5 mr-2 text-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.1.4-.27.6-.53l.6-1.037.135-.234A3.507 3.507 0 0012 15V9.5a3.5 3.5 0 00-7 0V15a3.5 3.5 0 00.406 1.482l.135.234.6 1.037c.2.26.414.43.6.53.095.05.186.1.281.14l.018.008.006.003zM10 16.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd" />
+                        <path d="M10 1.5a5.5 5.5 0 00-5.478 5.035l-1.018.182A1.5 1.5 0 002 8.217V15a4.5 4.5 0 004.5 4.5h7A4.5 4.5 0 0018 15V8.217a1.5 1.5 0 00-1.504-1.499l-1.018-.182A5.5 5.5 0 0010 1.5zM9 6.5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" />
+                    </svg>
+                    <span>MG - Brasil 🇧🇷</span>
+                </li>
+            </ul>
         </main>
     </div>
-    
+
     <footer class="w-full text-center py-8">
         <p class="text-sm text-gray-500">
-            Site da <a href="https://cfsjcode.github.io/Teen-Wolf/index.html" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-500 hover:text-orange-400 transition-colors uppercase">equipe de robótica fll teen wolf</a> criado e mantido pela <a href="https://cfsjcode.github.io/CFSJ-TECH/" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">CFSJ TECH</a>.
+            Site da
+            <a href="https://cfsjcode.github.io/Teen-Wolf/index.html" target="_blank" rel="noopener noreferrer" class="font-semibold text-orange-500 hover:text-orange-400 transition-colors uppercase">equipe de robótica fll teen wolf</a>
+            criado e mantido pela
+            <a href="https://cfsjcode.github.io/CFSJ-TECH/" target="_blank" rel="noopener noreferrer" class="font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">CFSJ TECH</a>.
         </p>
     </footer>
 
-    <script>
-        // Script para o menu hamburguer
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburgerButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Script para arredondar o ícone do site (favicon)
-        window.onload = function() {
-            const faviconLink = document.getElementById('favicon');
-            if (!faviconLink) return;
-
-            const originalFaviconUrl = faviconLink.href;
-            const img = new Image();
-            // Permite carregar a imagem de outro domínio (ibb.co) sem problemas de CORS no canvas
-            img.crossOrigin = 'Anonymous'; 
-            img.src = originalFaviconUrl;
-
-            // Quando a imagem for carregada, executa o código para arredondá-la
-            img.onload = function() {
-                const canvas = document.createElement('canvas');
-                const size = 64; 
-                canvas.width = size;
-                canvas.height = size;
-
-                const context = canvas.getContext('2d');
-                context.beginPath();
-                context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2, true);
-                context.closePath();
-                context.clip();
-                context.drawImage(img, 0, 0, size, size);
-                faviconLink.href = canvas.toDataURL('image/png');
-            };
-
-            // Adiciona um tratamento de erro caso a imagem não possa ser carregada
-            img.onerror = function() {
-                console.error("Não foi possível carregar a imagem do favicon para arredondamento.");
-            };
-        };
-    </script>
-
+    <script src="script.js" defer></script>
 </body>
 </html>
