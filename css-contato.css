@@ -1,0 +1,59 @@
+        /* Define a fonte Inter como padrão e um fundo gradiente temático */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #111827, #1a202c, #000000);
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        /* Efeito de sombra no texto para melhor legibilidade */
+        .text-shadow {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        /* Estilização dos ícones de contato com transições suaves */
+        .contact-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .contact-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            background-color: rgba(234, 88, 12, 0.2); /* Cor laranja do tema */
+            border-color: rgba(234, 88, 12, 0.5);
+        }
+        .contact-icon svg {
+            transition: transform 0.3s ease;
+            color: #f3f4f6; /* cinza claro */
+        }
+        .contact-icon:hover svg {
+            transform: scale(1.1);
+            color: #fb923c; /* laranja */
+        }
+        /* Estilo da dica (tooltip) que aparece ao passar o mouse */
+        .tooltip {
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            pointer-events: none; /* Impede que o tooltip interfira no mouse */
+        }
+        .contact-icon:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
