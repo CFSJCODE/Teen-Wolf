@@ -24,6 +24,32 @@ CSS3 Moderno: Utilização de Flexbox e CSS Grid para layouts responsivos e Vari
 
 JavaScript (ES6+): Vanilla JS para interatividade e manipulação do DOM, com código modularizado para seguir as melhores práticas.
 
+🚀 Como Executar
+Para visualizar o projeto localmente, siga estes passos:
+
+Clone o repositório:
+
+git clone https://github.com/CFSJCODE/Teen-Wolf.git
+
+Navegue até a pasta do projeto:
+
+cd Teen-Wolf
+
+Abra o arquivo index.html no seu navegador de preferência. Para uma melhor experiência de desenvolvimento, recomenda-se usar um servidor local, como a extensão Live Server do VS Code.
+
+🤝 Contribuição
+Contribuições são bem-vindas! Se você tem alguma ideia para melhorar o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+Faça um Fork do projeto.
+
+Crie uma nova branch (git checkout -b feature/sua-feature).
+
+Faça o Commit das suas alterações (git commit -m 'feat: Adiciona nova feature').
+
+Faça o Push para a branch (git push origin feature/sua-feature).
+
+Abra um Pull Request.
+
 📝 Licença
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
