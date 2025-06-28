@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página em Construção</title>
+    <meta name="description" content="Esta página está em construção. Estamos trabalhando para trazer novo conteúdo em breve. Agradecemos a sua paciência.">
+    <meta name="author" content="CFSJ TECH">
+    <!-- Impede que esta página seja indexada pelos motores de busca -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Icone do Site (Favicon) -->
+    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Folha de Estilo Externa -->
+    <link rel="stylesheet" href="css-em-construcao.css" />
+</head>
+<body class="text-white">
+
+        <!-- Menu de Navegação -->
+    <header>
+        <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between h-16">
+                    <div>
+                        <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-400 transition-colors duration-300">TEEN WOLF</a>
+                    </div>
+                    <!-- Menu para Desktop -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="index.html" class="text-gray-300 py-2 text-sm font-medium">Início</a>
+                        <a href="sobre-nos.html" class="text-gray-300 py-2 text-sm font-medium">Sobre Nós</a>
+                        <a href="historia.html" class="text-gray-300 py-2 text-sm font-medium">História Da Equipe</a>
+                        <a href="fotos-da-equipe.html" class="text-gray-300 py-2 text-sm font-medium">Fotos Da Equipe</a>
+                        <a href="contato.html" class="text-gray-300 py-2 text-sm font-medium">Contato</a>
+                    </div>
+                    <!-- Botão do Menu Hamburguer para Mobile -->
+                    <div class="md:hidden">
+                        <button id="hamburger-button" class="text-white focus:outline-none" aria-label="Abrir menu">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu para Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
+                <a href="index.html" class="block py-2 px-6 text-sm text-gray-300">Início</a>
+                <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300">Sobre Nós</a>
+                <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300">História Da Equipe</a>
+                <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-gray-300">Fotos Da Equipe</a>
+                <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="w-full min-h-screen flex items-center justify-center p-4">
+        <main class="glass-effect w-full max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
+            
+            <!-- Ícone de Construção -->
+            <div class="mb-6">
+                <svg class="w-24 h-24 mx-auto text-orange-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l.354-.354a3.75 3.75 0 0 0-5.303-5.303l-.354.353M3 21l3.75-3.75m2.871-1.286a3.75 3.75 0 1 1 5.304 5.304l-5.304-5.304Z" />
+                </svg>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-black uppercase tracking-wide text-shadow text-white">Página em Construção</h1>
+            <p class="mt-4 text-lg text-gray-300 text-shadow max-w-xl mx-auto">
+                Estamos trabalhando para trazer um novo conteúdo incrível para você. Por favor, volte em breve!
+            </p>
+
+        </main>
+    </div>
+
+    <script src="script-em-construcao.js" defer></script>
+</body>
+</html>
