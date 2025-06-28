@@ -31,9 +31,13 @@ body {
 
 /* Estilo para os botões de ação */
 .action-button {
+  /* Cor laranja pastel (equivalente a orange-400 do Tailwind) */
+  background-color: #fb923c;
   transition: background-color 0.3s, transform 0.2s;
 }
 .action-button:hover {
+  /* Cor laranja vibrante original (equivalente a orange-600 do Tailwind) */
+  background-color: #ea580c;
   transform: translateY(-2px);
 }
 
