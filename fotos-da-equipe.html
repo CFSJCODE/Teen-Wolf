@@ -1,157 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotos da Equipe - Teen Wolf</title>
+    <!-- Metadados Essenciais para SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria de Fotos - Equipe de Robótica Teen Wolf | Sesi Barreiro</title>
+    <meta name="description" content="Veja as fotos da equipe de robótica Teen Wolf em competições, treinamentos e eventos. Acompanhe nossa jornada na FIRST LEGO League.">
+    <meta name="keywords" content="fotos teen wolf, galeria teen wolf, fotos equipe fll, fotos robótica, imagens first lego league, Sesi Barreiro, equipe de robotica no barreiro">
+    <meta name="author" content="CFSJ TECH">
+    <meta name="google-site-verification" content="qpdubDpjluAAwqTiNbh7W0tYYKwAMb3COZQ6ntawjfA" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://cfsjcode.github.io/Teen-Wolf/fotos-da-equipe.html" />
+
+    <!-- Metadados Geográficos -->
+    <meta name="geo.region" content="BR-MG" />
+    <meta name="geo.placename" content="Belo Horizonte, Barreiro" />
+    <meta name="ICBM" content="-19.9699, -44.0284" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Galeria de Fotos - Equipe de Robótica Teen Wolf" />
+    <meta property="og:description" content="Veja as fotos da equipe de robótica Teen Wolf em competições, treinamentos e eventos.">
+    <meta property="og:image" content="https://i.ibb.co/WRr3bK1/Foto-Teen-Wolf-001.jpg" />
+    <meta property="og:url" content="https://cfsjcode.github.io/Teen-Wolf/fotos-da-equipe.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Teen Wolf Robótica" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galeria de Fotos - Equipe de Robótica Teen Wolf">
+    <meta name="twitter:description" content="Veja as fotos da equipe de robótica Teen Wolf em competições, treinamentos e eventos.">
+    <meta name="twitter:image" content="https://i.ibb.co/WRr3bK1/Foto-Teen-Wolf-001.jpg">
+
     <!-- Icone do Site (Favicon) -->
-    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png">
+    <link id="favicon" rel="icon" href="https://i.ibb.co/j2FYSQB/Logo.png" type="image/png" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Estilo customizado para usar a fonte Inter */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827; /* bg-gray-900 */
-        }
-        /* Efeito de vidro para o container principal */
-        .glass-container {
-            background: rgba(31, 41, 55, 0.5); /* bg-gray-800 com opacidade */
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        /* Sombra de texto para legibilidade */
-        .text-shadow {
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        /* Efeito para os cards das imagens */
-        .photo-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .photo-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        .photo-card img {
-            transition: transform 0.4s ease;
-        }
-        .photo-card:hover img {
-            transform: scale(1.1);
-        }
-        /* Estilos para o Modal Lightbox */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-        .lightbox.show {
-            opacity: 1;
-            visibility: visible;
-        }
-        .lightbox-content {
-            max-width: 90vw;
-            max-height: 90vh;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-        }
-        .lightbox.show .lightbox-content {
-            transform: scale(1);
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 3rem;
-            color: white;
-            cursor: pointer;
-            line-height: 1;
-        }
-        .lightbox-close:hover {
-            color: #fb923c; /* orange-400 */
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
 
-        /* Estilos da Barra de Rolagem Customizada */
-        /* Para navegadores Webkit (Chrome, Safari) */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #1f2937; /* bg-gray-800 */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #f97316; /* orange-500 */
-            border-radius: 20px;
-            border: 3px solid #1f2937; /* bg-gray-800 */
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #ea580c; /* orange-600 */
-        }
-    </style>
+    <!-- Folhas de Estilo Externas -->
+    <link rel="stylesheet" href="css-fotos.css" />
+    
 </head>
 <body class="text-white">
 
     <!-- Menu de Navegação -->
-    <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6">
-            <div class="flex items-center justify-between h-16">
-                <div>
-                    <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-500 transition-colors duration-300">TEEN WOLF</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Início</a>
-                    <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Sobre Nós</a>
-                    <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">História Da Equipe</a>
-                    <a href="fotos-da-equipe.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Fotos Da Equipe</a>
-                    <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-500 hover:border-orange-500 py-2 text-sm font-medium transition-colors duration-300">Contato</a>
-                </div>
-                <!-- Botão do Menu Hamburguer para Mobile -->
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
+    <header>
+        <nav class="bg-gray-800/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between h-16">
+                    <div>
+                        <a href="index.html" class="text-xl font-black uppercase tracking-wider text-white hover:text-orange-400 transition-colors duration-300">TEEN WOLF</a>
+                    </div>
+                    <!-- Menu para Desktop -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="index.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium">Início</a>
+                        <a href="sobre-nos.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium">Sobre Nós</a>
+                        <a href="historia.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium">História Da Equipe</a>
+                        <a href="fotos-da-equipe.html" class="text-orange-500 border-b-2 border-orange-500 py-2 text-sm font-medium" aria-current="page">Fotos Da Equipe</a>
+                        <a href="contato.html" class="text-gray-300 border-b-2 border-transparent hover:text-orange-400 hover:border-orange-400 py-2 text-sm font-medium">Contato</a>
+                    </div>
+                    <!-- Botão do Menu Hamburguer para Mobile -->
+                    <div class="md:hidden">
+                        <button id="hamburger-button" class="text-white focus:outline-none" aria-label="Abrir menu">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Menu para Mobile -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
-            <a href="index.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
-            <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Sobre Nós</a>
-            <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">História Da Equipe</a>
-            <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-orange-400">Fotos Da Equipe</a>
-            <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
-        </div>
-    </nav>
+            <!-- Menu para Mobile -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-800/95">
+                <a href="index.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
+                <a href="sobre-nos.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Sobre Nós</a>
+                <a href="historia.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">História Da Equipe</a>
+                <a href="fotos-da-equipe.html" class="block py-2 px-6 text-sm text-orange-400">Fotos Da Equipe</a>
+                <a href="contato.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700 hover:text-white">Contato</a>
+            </div>
+        </nav>
+    </header>
 
     <!-- Container Principal -->
     <div class="w-full p-4 sm:p-6 md:p-8">
-        <div class="glass-container w-full max-w-7xl mx-auto rounded-3xl p-8 md:p-12">
+        <main class="glass-container w-full max-w-7xl mx-auto rounded-3xl p-8 md:p-12">
             
             <!-- Cabeçalho da Galeria -->
             <header class="text-center mb-12">
@@ -164,53 +101,36 @@
             <!-- Galeria de Imagens -->
             <div id="photo-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Imagem Adicionada 1 -->
                 <div class="photo-card rounded-2xl">
-                    <img src="https://i.ibb.co/WRr3bK1/Foto-Teen-Wolf-001.jpg" alt="Foto-Teen-Wolf-001" border="0" class="w-full h-full object-cover">
+                    <img src="https://i.ibb.co/WRr3bK1/Foto-Teen-Wolf-001.jpg" alt="Equipe Teen Wolf reunida para foto oficial" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Adicionada 2 -->
                 <div class="photo-card rounded-2xl">
-                    <img src="https://i.ibb.co/DPBJdNyp/Foto-Teen-Wolf-002.jpg" alt="Foto-Teen-Wolf-002" border="0" class="w-full h-full object-cover">
+                    <img src="https://i.ibb.co/DPBJdNyp/Foto-Teen-Wolf-002.jpg" alt="Membros da equipe Teen Wolf trabalhando no robô" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Adicionada 3 -->
                 <div class="photo-card rounded-2xl">
-                    <img src="https://i.ibb.co/j93fNDQ0/Foto-Teen-Wolf-003.jpg" alt="Foto-Teen-Wolf-003" border="0" class="w-full h-full object-cover">
+                    <img src="https://i.ibb.co/j93fNDQ0/Foto-Teen-Wolf-003.jpg" alt="Robô da equipe Teen Wolf na arena de competição" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Adicionada 4 -->
                 <div class="photo-card rounded-2xl">
-                    <img src="https://i.ibb.co/YTk8q43r/Foto-Teen-Wolf-004.jpg" alt="Foto-Teen-Wolf-004" border="0" class="w-full h-full object-cover">
+                    <img src="https://i.ibb.co/YTk8q43r/Foto-Teen-Wolf-004.jpg" alt="Equipe Teen Wolf comemorando durante torneio" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Existente 1 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/RpddQNtS/07-De-Maio-De-2023.jpg" alt="Foto da equipe em 7 de Maio de 2023" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Existente 2 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/1tgQFRSq/11-de-julho-de-2024.jpg" alt="Foto da equipe em 11 de Julho de 2024" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Existente 3 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/7J9bwLPf/12-De-Feveiro-De-2023.jpg" alt="Foto da equipe em 12 de Fevereiro de 2023" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Existente 4 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/84jrBxtw/30-De-Outubro-De-2024.jpg" alt="Foto da equipe em 30 de Outubro de 2024" class="w-full h-full object-cover">
                 </div>
-
-                <!-- Imagem Existente 5 -->
                 <div class="photo-card rounded-2xl">
                     <img src="https://i.ibb.co/6RTS38Bf/Foto-12-De-Fevereiro-De-2023.png" alt="Outra foto da equipe em 12 de Fevereiro de 2023" class="w-full h-full object-cover">
                 </div>
                 
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Modal Lightbox -->
@@ -219,99 +139,6 @@
         <img id="lightbox-image" class="lightbox-content" src="" alt="Imagem em tela cheia">
     </div>
 
-    <script>
-        // Script para o menu hamburguer
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburgerButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Script para fechar o menu ao clicar em um link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Lógica para o Lightbox
-        document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.getElementById('photo-gallery');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxClose = document.getElementById('lightbox-close');
-
-            gallery.addEventListener('click', (e) => {
-                // Verifica se o clique foi em um card de foto
-                const photoCard = e.target.closest('.photo-card');
-                if (photoCard) {
-                    // Pega a imagem diretamente dentro do photo-card
-                    const imageElement = photoCard.querySelector('img');
-                    if(imageElement) {
-                        // Define a imagem do lightbox e o exibe
-                        lightboxImage.src = imageElement.src;
-                        lightbox.classList.add('show');
-                    }
-                }
-            });
-
-            // Função para fechar o lightbox
-            const closeLightbox = () => {
-                lightbox.classList.remove('show');
-            };
-
-            // Event listeners para fechar o lightbox
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', (e) => {
-                // Fecha se o clique for no fundo escuro, não na imagem
-                if (e.target === lightbox) {
-                    closeLightbox();
-                }
-            });
-        });
-        
-        // Script para arredondar o ícone do site (favicon)
-        window.onload = function() {
-            const faviconLink = document.getElementById('favicon');
-            if (!faviconLink) return;
-
-            const originalFaviconUrl = faviconLink.href;
-            const img = new Image();
-            // Permite carregar a imagem de outro domínio (ibb.co) sem problemas de CORS no canvas
-            img.crossOrigin = 'Anonymous'; 
-            img.src = originalFaviconUrl;
-
-            // Quando a imagem for carregada, executa o código para arredondá-la
-            img.onload = function() {
-                const canvas = document.createElement('canvas');
-                // Define o tamanho da imagem de origem do favicon. 
-                // Navegadores geralmente redimensionam para 16x16 ou 32x32, 
-                // mas um tamanho maior garante qualidade em outros contextos (ex: favoritos).
-                const size = 64; 
-                canvas.width = size;
-                canvas.height = size;
-
-                const context = canvas.getContext('2d');
-
-                // Cria um caminho de recorte circular
-                context.beginPath();
-                context.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2, true);
-                context.closePath();
-                context.clip();
-
-                // Desenha a imagem original dentro do círculo
-                context.drawImage(img, 0, 0, size, size);
-
-                // Define o novo ícone (agora circular) como o favicon da página
-                faviconLink.href = canvas.toDataURL('image/png');
-            };
-
-            // Adiciona um tratamento de erro caso a imagem não possa ser carregada
-            img.onerror = function() {
-                console.error("Não foi possível carregar a imagem do favicon para arredondamento.");
-            };
-        };
-    </script>
+    <script src="script-fotos.js" defer></script>
 </body>
 </html>
