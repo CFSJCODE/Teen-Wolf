@@ -18,7 +18,7 @@ Contato: Meios diretos para entrar em contato com a equipe.
 🛠️ Stack de Tecnologias
 A escolha da stack foi deliberada para manter o projeto leve, com controle total sobre o código e sem dependências de frameworks.
 
-HTML5 Semântico: Estruturação do conteúdo com tags semânticas (<header>, <main>, <section>) para otimizar a acessibilidade (A11Y) e SEO.
+HTML5 Semântico: Estruturação do conteúdo com tags semânticas <header>, <main>, <section> para otimizar a acessibilidade (A11Y) e SEO.
 
 CSS3 Moderno: Utilização de Flexbox e CSS Grid para layouts responsivos e Variáveis CSS para um sistema de design consistente e de fácil manutenção.
 
