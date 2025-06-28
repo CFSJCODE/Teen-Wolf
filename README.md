@@ -1,68 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README - Teen Wolf</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-            line-height: 1.6;
-            color: #24292e;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h1, h2, h3 {
-            border-bottom: 1px solid #eaecef;
-            padding-bottom: 0.3em;
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-        h1 { font-size: 2em; }
-        h2 { font-size: 1.5em; }
-        ul, ol {
-            padding-left: 2em;
-        }
-        li {
-            margin-bottom: 0.5em;
-        }
-        code {
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            background-color: rgba(27,31,35,0.05);
-            padding: 0.2em 0.4em;
-            margin: 0;
-            font-size: 85%;
-            border-radius: 3px;
-        }
-        pre {
-            background-color: #f6f8fa;
-            border-radius: 3px;
-            font-size: 85%;
-            line-height: 1.45;
-            overflow: auto;
-            padding: 16px;
-        }
-        pre code {
-            background-color: transparent;
-            padding: 0;
-            margin: 0;
-            font-size: 100%;
-            border: 0;
-        }
-        strong {
-            font-weight: 600;
-        }
-        hr {
-            height: .25em;
-            padding: 0;
-            margin: 24px 0;
-            background-color: #e1e4e8;
-            border: 0;
-        }
-    </style>
-</head>
-<body>
+
 
     <h1>Teen Wolf - Website Institucional</h1>
 
@@ -119,5 +55,3 @@
     <hr>
     <p><strong>Equipe Teen Wolf</strong> | <em>Construindo o futuro, um bloco de cada vez.</em></p>
 
-</body>
-</html>
